@@ -1,17 +1,30 @@
 import 'package:flutter/material.dart';
 
-push(BuildContext context, String route) {
-  //Navigator.of(context).push(MaterialPageRoute(builder: ((context) => widget)));
-  Navigator.of(context).pushNamed(route);
-}
+class RoutingUtil {
+  static final GlobalKey<NavigatorState> navigatorKey =
+      GlobalKey<NavigatorState>(debugLabel: "saja");
 
-pop(BuildContext context) {
-  Navigator.pop(context);
-}
+  static push(String route, {Object? arguments}) {
+    navigatorKey.currentState!.pushNamed(route, arguments: arguments);
+  }
 
-pushReplacement(BuildContext context, String route) {
-  // Navigator.pushReplacement(
-  //     context, MaterialPageRoute(builder: ((context) => widget)));
-  Navigator.pushReplacementNamed(
-      context, route);
+  static pop() {
+    navigatorKey.currentState!.pop();
+  }
+
+  static pushReplacement(String route, {Object? arguments}) {
+    navigatorKey.currentState!
+        .pushReplacementNamed(route, arguments: arguments);
+  }
+
+  static Route<dynamic> errorRoute() {
+    return MaterialPageRoute(builder: (_) {
+      return Scaffold(
+        appBar: AppBar(),
+        body: const Center(
+          child: Text("Error")
+          ),
+      );
+    });
+  }
 }

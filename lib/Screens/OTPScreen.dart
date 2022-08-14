@@ -77,7 +77,7 @@ class _OTPScreenState extends State<OTPScreen> {
                     text: "Next",
                     textstyle: btnTextStyle,
                     onpressed: () {
-                      push(context,Routes.newPassScreen);
+                      RoutingUtil.push(Routes.newPassScreen);
                     },
                     background: mainColor,
                   ),

@@ -107,7 +107,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                     GestureDetector(
                         onTap: () {
-                          push(context,Routes.loginScreen);
+                          RoutingUtil.push(Routes.loginScreen);
                         },
                         child: Text(
                           " Login",

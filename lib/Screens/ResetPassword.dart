@@ -65,7 +65,7 @@ class _ResetPassState extends State<ResetPass> {
                     text: "Send",
                     textstyle: btnTextStyle,
                     onpressed: () {
-                      push(context,Routes.oTPScreen);
+                      RoutingUtil.push(Routes.oTPScreen);
                     },
                     background: mainColor,
                   ),

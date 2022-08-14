@@ -75,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: subTitleStyle,
                   ),
                   onTap: () {
-                    push(context, Routes.resetPasswordScreen);
+                    RoutingUtil.push(Routes.resetPasswordScreen);
                   },
                 ),
                 SizedBox(height: 50.h),
@@ -108,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     GestureDetector(
                         onTap: () {
-                          push(context, Routes.signUpScreen);
+                          RoutingUtil.push(Routes.signUpScreen);
                         },
                         child: Text(
                           "Sign Up",

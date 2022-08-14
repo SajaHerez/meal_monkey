@@ -6,6 +6,7 @@ import 'package:meal_mon/Screens/mainScreen.dart';
 
 import '../Components/Styles/Colors.dart';
 import '../Data/routesName.dart';
+import '../Utils/hlperRouting.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -39,5 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
 splash(context) {
   Timer(const Duration(seconds: 3),
-      () => Navigator.pushReplacementNamed(context, Routes.onBoardingScreen));
+      () => RoutingUtil.pushReplacement(Routes.onBoardingScreen)
+      //Navigator.pushReplacementNamed(context, Routes.onBoardingScreen)
+      );
 }

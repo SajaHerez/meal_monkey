@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meal_mon/Screens/splashscreen.dart';
 
+import 'Data/routesName.dart';
+import 'Utils/hlperRouting.dart';
 import 'routes.dart';
-
 
 void main() {
   runApp(ScreenUtilInit(
@@ -12,8 +13,11 @@ void main() {
       splitScreenMode: true,
       builder: (context, child) {
         return  MaterialApp(
-          routes: routesMap ,
-          //home: const SplashScreen(),
+          navigatorKey: RoutingUtil.navigatorKey,
+          onGenerateRoute: GenerateRoutes.onGenerateRoutes,
+           //  routes:routesMap,
+          initialRoute: Routes.splashScreen,
+         // home: const SplashScreen(),
           debugShowCheckedModeBanner: false,
         );
       }));

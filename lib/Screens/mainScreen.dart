@@ -33,7 +33,7 @@ class _MainScreenState extends State<MainScreen> {
               borderColor: mainColor,
               text: 'Login',
               onpressed: () {
-                push(context, Routes.loginScreen);
+                RoutingUtil.push(Routes.loginScreen);
               },
               textstyle: btnTextStyle,
             ),
@@ -45,7 +45,7 @@ class _MainScreenState extends State<MainScreen> {
               borderColor: mainColor,
               text: 'Create an Account',
               onpressed: () {
-                push(context, Routes.signUpScreen);
+                RoutingUtil.push(Routes.signUpScreen);
               },
               textstyle: btnTextStyleO,
             ),

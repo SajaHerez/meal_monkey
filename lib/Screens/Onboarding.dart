@@ -95,7 +95,7 @@ class _OnBoardingState extends State<OnBoarding> {
                     textstyle: btnTextStyle,
                     onpressed: () {
                       if (_index == _imagelist.length - 1) {
-                        pushReplacement(context, Routes.mainScreen);
+                        RoutingUtil.pushReplacement(Routes.mainScreen);
                       }
 
                       _controller.nextPage(

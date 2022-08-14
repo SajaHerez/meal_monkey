@@ -6,6 +6,7 @@ import 'package:meal_mon/Utils/validation.dart';
 import '../Components/Widgets/CustomButton.dart';
 import '../Components/Styles/Colors.dart';
 import '../Components/Styles/TextStyles.dart';
+import '../Data/routesName.dart';
 
 class NewPassScreen extends StatefulWidget {
   const NewPassScreen({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class NewPassScreen extends StatefulWidget {
 }
 
 class _NewPassScreenState extends State<NewPassScreen> {
-   final _conPassController = TextEditingController();
+  final _conPassController = TextEditingController();
   final _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   @override
@@ -55,9 +56,9 @@ class _NewPassScreenState extends State<NewPassScreen> {
                   SizedBox(height: 28.h),
                   CustomTextField(
                     controller: _conPassController,
-                     validator: (conPass) {
-                    return confirmPassword(_passwordController.text, conPass);
-                  },
+                    validator: (conPass) {
+                      return confirmPassword(_passwordController.text, conPass);
+                    },
                     hitText: "Confirm Password",
                     keyboardType: TextInputType.visiblePassword,
                     obscureText: true,
