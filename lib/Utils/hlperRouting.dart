@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class RoutingUtil {
+  RoutingUtil._();
   static final GlobalKey<NavigatorState> navigatorKey =
       GlobalKey<NavigatorState>(debugLabel: "saja");
 
@@ -19,11 +20,8 @@ class RoutingUtil {
 
   static Route<dynamic> errorRoute() {
     return MaterialPageRoute(builder: (_) {
-      return Scaffold(
-        appBar: AppBar(),
-        body: const Center(
-          child: Text("Error")
-          ),
+      return const Scaffold(
+        body: Center(child: Text("Error")),
       );
     });
   }

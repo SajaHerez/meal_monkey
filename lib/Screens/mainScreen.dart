@@ -20,36 +20,41 @@ class _MainScreenState extends State<MainScreen> {
       resizeToAvoidBottomInset: false,
       body: Container(
         color: white,
-        child: Column(
-          children: [
-            // SvgPicture.asset("assets/images/Organetopshape.svg"),
-            Image.asset(
-              "assets/images/unknown2.png",
-              fit: BoxFit.fill,
-              width: double.infinity,
-            ),
-            CustomButton(
-              background: mainColor,
-              borderColor: mainColor,
-              text: 'Login',
-              onpressed: () {
-                RoutingUtil.push(Routes.loginScreen);
-              },
-              textstyle: btnTextStyle,
-            ),
-            SizedBox(
-              height: 20.h,
-            ),
-            CustomButton(
-              background: white,
-              borderColor: mainColor,
-              text: 'Create an Account',
-              onpressed: () {
-                RoutingUtil.push(Routes.signUpScreen);
-              },
-              textstyle: btnTextStyleO,
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              // SvgPicture.asset("assets/images/Organetopshape.svg"),
+              Image.asset(
+                "assets/images/unknown2.png",
+                fit: BoxFit.fill,
+                width: double.infinity,
+              ),
+              CustomButton(
+                background: mainColor,
+                borderColor: mainColor,
+                text: 'Login',
+                onpressed: () {
+                  RoutingUtil.push(Routes.loginScreen);
+                },
+                textstyle: btnTextStyle,
+              ),
+              SizedBox(
+                height: 20.h,
+              ),
+              CustomButton(
+                background: white,
+                borderColor: mainColor,
+                text: 'Create an Account',
+                onpressed: () {
+                  RoutingUtil.push(Routes.signUpScreen);
+                },
+                textstyle: btnTextStyleO,
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+            ],
+          ),
         ),
       ),
     );

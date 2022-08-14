@@ -11,6 +11,7 @@ import 'Screens/splashscreen.dart';
 import 'Utils/hlperRouting.dart';
 
 class GenerateRoutes {
+  GenerateRoutes._();
   static Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
     switch (settings.name) {
       case Routes.splashScreen:
@@ -45,7 +46,7 @@ class GenerateRoutes {
         return MaterialPageRoute(
           builder: (context) => const NewPassScreen(),
         );
-    
+
       default:
         return RoutingUtil.errorRoute();
     }

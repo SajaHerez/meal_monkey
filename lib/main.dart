@@ -12,12 +12,13 @@ void main() {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return  MaterialApp(
+        return MaterialApp(
+          onGenerateTitle: (context) => "Meal Monkey",
           navigatorKey: RoutingUtil.navigatorKey,
           onGenerateRoute: GenerateRoutes.onGenerateRoutes,
-           //  routes:routesMap,
+          //  routes:routesMap,
           initialRoute: Routes.splashScreen,
-         // home: const SplashScreen(),
+          // home: const SplashScreen(),
           debugShowCheckedModeBanner: false,
         );
       }));

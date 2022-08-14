@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meal_mon/Utils/reg_exp.dart';
+import 'package:meal_mon/Data/reg_exp.dart';
 
 String? passwordValidation(String? password) {
   if (password!.isEmpty) {
